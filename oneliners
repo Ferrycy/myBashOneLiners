@@ -1,0 +1,4 @@
+#anything to mp3
+for f in "$@" ; do ffmpeg -i "$f" -vn -ar 44100 -ac 2 -ab 64k -f mp3 ${f:0:-4}.mp3; done
+
+#
